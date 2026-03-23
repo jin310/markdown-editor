@@ -1,0 +1,182 @@
+
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css');
+
+:root {
+  --editor-bg: #ffffff;
+  --accent: #4f46e5;
+  --table-border: #e2e8f0;
+  --table-header: #f8fafc;
+  --zhihu-blue: #175199;
+  --wechat-green: #07c160;
+  --wechat-primary: #576b95;
+  --wechat-bg: #fdfdfd;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fdfdfd;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
+
+/* 通用 Markdown 样式 */
+.markdown-body {
+  font-family: 'Inter', "LXGW WenKai Screen", -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #334155;
+  word-break: break-word;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 0.3em;
+}
+
+.markdown-body h1 { font-size: 1.4em; margin-bottom: 0.4em; }
+.markdown-body h2 { font-size: 1.25em; margin: 0.8em 0 0.4em; }
+.markdown-body h3 { font-size: 1.1em; margin: 0.6em 0 0.3em; }
+
+/* --- 微信排版 (WeChat Theme) --- */
+.theme-wechat .markdown-body-container {
+  background-color: var(--wechat-bg);
+}
+
+.theme-wechat .markdown-body {
+  font-family: "LXGW WenKai Screen", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #3f3f3f;
+  letter-spacing: 0.03em;
+  text-align: justify;
+}
+
+/* 微信 H1：精致居中标题 */
+.theme-wechat .markdown-body h1 {
+  text-align: center;
+  margin: 1.2em 0 0.8em;
+  font-weight: bold;
+  color: #222;
+  font-size: 1.3em;
+}
+
+/* 微信 H2：色块标题 */
+.theme-wechat .markdown-body h2 {
+  margin: 1.5em 0 0.8em;
+  padding: 0.2em 0.5em;
+  background-color: var(--wechat-green);
+  color: #fff;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 1em;
+  box-shadow: 2px 2px 0px rgba(7, 193, 96, 0.2);
+}
+
+/* 微信 H3：侧边线标题 */
+.theme-wechat .markdown-body h3 {
+  margin: 1.2em 0 0.6em;
+  padding-left: 0.5em;
+  border-left: 4px solid var(--wechat-green);
+  color: #333;
+  font-size: 0.95em;
+}
+
+/* 微信引用：浅色卡片 */
+.theme-wechat .markdown-body blockquote {
+  border: none;
+  background: #f1f1f1;
+  border-radius: 6px;
+  padding: 0.5em 0.8em;
+  color: #666;
+  margin: 0.6em 0;
+  position: relative;
+  font-size: 0.9em;
+}
+
+/* 微信数学公式：整理后的精致卡片 */
+.theme-wechat .katex-display {
+  margin: 0.3em 0;
+  padding: 0.3em 0.4em;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.theme-wechat .katex {
+  font-size: 1.05em;
+  color: #333;
+}
+
+/* 微信图片：圆角与阴影 */
+.theme-wechat .markdown-body img {
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  margin: 1em auto;
+}
+
+/* --- 知乎风格覆盖 --- */
+.theme-zhihu .markdown-body {
+  font-family: "LXGW WenKai Screen", -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #121212;
+}
+
+/* 代码块 */
+.markdown-body pre {
+  background-color: #1e293b !important;
+  color: #e2e8f0 !important;
+  padding: 0.6rem !important;
+  border-radius: 0.4rem !important;
+  margin: 0.6rem 0 !important;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.45;
+}
+
+.markdown-body code {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #f1f5f9;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.375rem;
+  color: #4f46e5;
+  font-size: 0.9em;
+}
+
+/* 公式基础样式 */
+.katex-display {
+  margin: 0.2rem 0 !important;
+  padding: 0.2rem !important;
+  background: #f8fafc;
+  border-radius: 0.4rem;
+  overflow-x: auto;
+}
+
+.katex-display > .katex {
+  margin: 0 !important;
+  padding: 0 !important;
+}

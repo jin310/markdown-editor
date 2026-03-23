@@ -1,0 +1,5 @@
+{
+  "name": "Markdown Editor",
+  "description": "A high-performance, minimalist Markdown editor featuring real-time rendering, document management, and privacy-focused local execution.",
+  "requestFramePermissions": []
+}
